@@ -1,5 +1,5 @@
 ---
-title: Connected Components in an Undirected Graph
+title: Connected Components in an Undirected Graph using DFS
 date: 2020-07-04T11:25:07.712Z
 author: Nachiket Bhuta
 description: "A graph is said to be disconnected if it is not connected, i.e. if
@@ -10,11 +10,9 @@ description: "A graph is said to be disconnected if it is not connected, i.e. if
 Given an undirected graph G with n nodes and m edges. We are required to find in it all the connected components, i.e, several groups of vertices such that within a group each vertex can be reached from another and no path exists between different groups.
 
 ### Description
-
-1. To solve the problem, we can use Depth First Search or Breadth First Search.
-2. In fact, we will be doing a series of rounds of DFS: The first round will start from first node and all the nodes in the first connected component will be traversed (found). 
-3. Then we find the first unvisited node of the remaining nodes, and run Depth First Search on it, thus finding a second connected component. And so on, until all the nodes are visited.
-4. The total asymptotic running time of this algorithm is $O(n+m)$.
+1. We will be doing a series of rounds of DFS: The first round will start from first node and all the nodes in the first connected component will be traversed (found). 
+2. Then we find the first unvisited node of the remaining nodes, and run Depth First Search on it, thus finding a second connected component. And so on, until all the nodes are visited.
+3. The total asymptotic running time of this algorithm is $O(n+m)$.
 5. In fact, this algorithm will not run on the same vertex twice, which means that each edge will be seen exactly two times (at one end and at the other end).
 
 ### Example
