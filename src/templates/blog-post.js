@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -21,19 +20,20 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <header>
-          <h1
+          <h3
             style={{
               marginTop: rhythm(1),
               marginBottom: 0,
             }}
           >
             {post.frontmatter.title}
-          </h1>
+          </h3>
           <p
             style={{
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
+              marginTop: `1%`
             }}
           >
             {post.frontmatter.date} by {post.frontmatter.author}

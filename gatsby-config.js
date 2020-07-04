@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Velocity Learn`,
     description: `A starter for Algorithms`,
-    siteUrl: `https://velocitylearn.ml/`
+    siteUrl: `https://velocitylearn.ml/`,
   },
   plugins: [
     {
@@ -27,8 +27,8 @@ module.exports = {
             resolve: `gatsby-remark-katex`,
             options: {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `true`
-            }
+              strict: `true`,
+            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -44,7 +44,7 @@ module.exports = {
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
+          `gatsby-remark-smartypants`,
         ],
       },
     },
@@ -76,7 +76,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

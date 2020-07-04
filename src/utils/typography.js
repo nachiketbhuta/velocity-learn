@@ -1,10 +1,10 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: '18px',
+  baseFontSize: "18px",
   baseLineHeight: 1.45,
-  headerFontFamily: ['Poppins', 'Arial', 'sans-serif'],
-  bodyFontFamily: ['Poppins', 'serif'],
+  headerFontFamily: ["Poppins", "Arial", "sans-serif"],
+  bodyFontFamily: ["Poppins", "serif"],
   // See below for the full list of options.
 })
 

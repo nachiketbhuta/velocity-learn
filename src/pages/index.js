@@ -1,10 +1,21 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+
+
+const styles = {
+  card: {
+    boxShadow: `0 4px 8px 0 rgba(0,0,0,0.5)`,
+    transition: `0.3s`,
+    borderRadius: `5px`,
+    borderBlockStyle: `1px solid black`,
+    padding: `15px 24px`,
+    marginBottom: `3%`,
+  }
+}
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -13,25 +24,31 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug} 
-          style={{boxShadow: `0 4px 8px 0 rgba(0,0,0,0.5)`,
-  transition: `0.3s`, borderRadius: `5px`, borderBlockStyle: `1px solid black`, padding: `15px 24px`, marginBottom: `7%`}}
+          <article
+            key={node.fields.slug}
+            style={styles.card}
           >
-            <header style={{marginBottom: `4%`}}>
+            <header style={{ marginBottom: `2%` }}>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link
+                  style={{ boxShadow: `none`, textDecoration: `none` }}
+                  to={node.fields.slug}
+                >
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date} by {node.frontmatter.author} - {node.timeToRead} {node.timeToRead == 1 ? " min read" : " mins read"}</small>
+              <small>
+                {node.frontmatter.date} by {node.frontmatter.author} -{" "}
+                {node.timeToRead}{" "}
+                {node.timeToRead == 1 ? " min read" : " mins read"}
+              </small>
             </header>
             <section>
               <p

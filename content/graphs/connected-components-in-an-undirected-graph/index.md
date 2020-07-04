@@ -7,13 +7,15 @@ description: "A graph is said to be disconnected if it is not connected, i.e. if
   nodes. In an undirected graph, a connected component is a set of vertices in a
   graph that are linked to each other by paths. "
 ---
+
 Given an undirected graph G with n nodes and m edges. We are required to find in it all the connected components, i.e, several groups of vertices such that within a group each vertex can be reached from another and no path exists between different groups.
 
 ### Description
-1. We will be doing a series of rounds of DFS: The first round will start from first node and all the nodes in the first connected component will be traversed (found). 
+
+1. We will be doing a series of rounds of DFS: The first round will start from first node and all the nodes in the first connected component will be traversed (found).
 2. Then we find the first unvisited node of the remaining nodes, and run Depth First Search on it, thus finding a second connected component. And so on, until all the nodes are visited.
 3. The total asymptotic running time of this algorithm is $O(n+m)$.
-5. In fact, this algorithm will not run on the same vertex twice, which means that each edge will be seen exactly two times (at one end and at the other end).
+4. In fact, this algorithm will not run on the same vertex twice, which means that each edge will be seen exactly two times (at one end and at the other end).
 
 ### Example
 
@@ -21,7 +23,7 @@ Given an undirected graph G with n nodes and m edges. We are required to find in
 
 ### Implementation
 
-C++ 
+C++
 
 ```cpp
 #include <bits/stdc++.h>
@@ -84,8 +86,11 @@ int main() {
 	return 0;
 }
 ```
+
 ---
+
 Java
+
 ```java
 import java.util.*;
 
@@ -177,6 +182,7 @@ public class ConnectedComponents {
 ```
 
 ---
+
 Python
 
 ```python
@@ -195,7 +201,7 @@ def dfs(u):
 
     # Push current node because there exists an edge from previous node
     connected.append(u)
-    
+
     for node in G[u]:
         if visited[node] is False:
             dfs(node)
@@ -214,10 +220,10 @@ connectedComponents = 0
 
 for i in range(1, vertices + 1):
     if visited[i] is False:
-        
+
         # Clears the components for next iteration
         connected = []
-        
+
         # Make a DFS call to the unvisited node
         dfs(i)
 
@@ -233,7 +239,7 @@ for i in range(1, vertices + 1):
 print(f"Total Connected Components in the graph are: {connectedComponents}")
 ```
 
-- - -
+---
 
 ### Practice Problems
 
