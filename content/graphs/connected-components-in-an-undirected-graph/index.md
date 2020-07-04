@@ -17,9 +17,13 @@ Given an undirected graph G with n nodes and m edges. We are required to find in
 4. The total asymptotic running time of this algorithm is $O(n+m)$.
 5. In fact, this algorithm will not run on the same vertex twice, which means that each edge will be seen exactly two times (at one end and at the other end).
 
+### Example
+
+![Connected Components](bdc31b1.jpg "Connected Components")
+
 ### Implementation
 
-1. C++
+C++ 
 
 ```cpp
 #include <bits/stdc++.h>
@@ -83,7 +87,9 @@ int main() {
 }
 ```
 
-2. Python
+- - -
+
+Python
 
 ```python
 maxN = 1000001
@@ -139,7 +145,9 @@ for i in range(1, vertices + 1):
 print(f"Total Connected Components in the graph are: {connectedComponents}")
 ```
 
-### Pratice Problems
+- - -
+
+### Practice Problems
 
 1. [Connected Components - HackerEarth](https://www.hackerearth.com/problem/algorithm/connected-components-in-a-graph/description/)
 2. [Is it a Tree? - SPOJ](https://www.spoj.com/problems/PT07Z/en/)
