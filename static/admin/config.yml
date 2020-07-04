@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: 'graphs'
+    label: 'Graphs'
+    folder: 'content/graphs'
     create: true
     slug: 'index'
     media_folder: ''
@@ -19,5 +19,9 @@ collections:
     fields:
     - { label: 'Title', name: 'title', widget: 'string' }
     - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+    - { label: 'Author', name: 'author', widget: 'string' }
     - { label: 'Description', name: 'description', widget: 'string' }
     - { label: 'Body', name: 'body', widget: 'markdown' }
+    - { label: 'C++ Implementation', name: 'cppImplementation', widget: 'code' }
+    - { label: 'Java Implementation', name: 'javaImplementation', widget: 'code' }
+    - { label: 'Python Implementation', name: 'pythonImplementation', widget: 'code' }
