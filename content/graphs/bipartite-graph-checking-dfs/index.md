@@ -24,7 +24,7 @@ In other words, the edges in bipartite graph should be from a vertex of set A to
 
 ### Example
 
-![Bipartite Graph and Complete Bipartite Graph](completebipartitegraph_1000.gif "Bipartite Graph and Complete Bipartite Graph")
+![Bipartite Graph and Complete Bipartite Graph](example-of-bipartite-graph.png "Bipartite Graph and Complete Bipartite Graph")
 
 ### Implementation
 
@@ -216,7 +216,7 @@ public class BipartiteGraph {
 Python
 
 ```python
-maxN = 100
+maxN = 1000001
 
 G = {}
 
