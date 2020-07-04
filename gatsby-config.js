@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `List Of Algorithms`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`
+    title: `Velocity Learn`,
+    description: `A starter for Algorithms`,
+    siteUrl: `https://velocitylearn.ml/`
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/graphs`,
+        name: `graphs`,
       },
     },
     {
@@ -28,6 +28,15 @@ module.exports = {
             options: {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `true`
+            }
+          },
+          {
+            resolve: `gatsby-remark-codemirror`,
+            options: {
+              // CSS class suffix to be used for produced `<pre/>` blocks.
+              // Default value is "default", which adds "cm-s-default" class.
+              // This class name matches
+              theme: "default"
             }
           },
           {
@@ -60,8 +69,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Velocity Learn`,
+        short_name: `Velocity Learn`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
