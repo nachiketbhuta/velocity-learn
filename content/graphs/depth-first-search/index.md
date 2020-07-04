@@ -120,10 +120,12 @@ It is very easy to describe / implement the algorithm recursively:
 2. After visiting a vertex, we further perform a DFS for each adjacent vertex that we haven't visited before. 
 3. This way we visit all vertices that are reachable from the starting vertex.
 
+### Example
+
+![Depth First Search](9fa1119.jpg "Depth First Search")
+
 ### Implementation
-
-1. C++
-
+C++
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -168,9 +170,8 @@ int main() {
 
 // Space Complexity: O(V). Since, an extra visited array is needed of size V.
 ```
-
-2. Python
-
+---
+Python
 ```python
 maxN = 1000001
 
