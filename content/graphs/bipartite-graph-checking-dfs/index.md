@@ -1,6 +1,6 @@
 ---
 title: Bipartite Graph Checking (DFS)
-date: 2020-07-04T19:05:57.644Z
+date: 2020-07-04T19:17:46.223Z
 author: Nachiket Bhuta
 description: "A bipartite graph is a graph whose vertices can be divided into
   two disjoint sets so that every edge connects two vertices from different sets
