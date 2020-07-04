@@ -1,5 +1,5 @@
 ---
-title: Connected Components in an Undirected Graph using DFS
+title: Connected Components in an Undirected Graph (DFS)
 date: 2020-07-04T11:25:07.712Z
 author: Nachiket Bhuta
 description: "A graph is said to be disconnected if it is not connected, i.e. if
