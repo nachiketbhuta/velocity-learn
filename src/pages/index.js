@@ -31,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>{node.frontmatter.date} by {node.frontmatter.author} - {node.timeToRead} {node.timeToRead == 1 ? " min read" : " mins read"}</small>
             </header>
             <section>
               <p
@@ -60,13 +60,15 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY")
             title
             description
+            author
           }
         }
       }

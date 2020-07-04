@@ -31,15 +31,6 @@ module.exports = {
             }
           },
           {
-            resolve: `gatsby-remark-codemirror`,
-            options: {
-              // CSS class suffix to be used for produced `<pre/>` blocks.
-              // Default value is "default", which adds "cm-s-default" class.
-              // This class name matches
-              theme: "default"
-            }
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
