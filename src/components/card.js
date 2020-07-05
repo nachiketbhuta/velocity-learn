@@ -39,7 +39,7 @@ const Card = ({ node, title }) => {
                 </Link>
               </h3>
               <small>
-                {node.frontmatter.date} by {node.frontmatter.author} - {" "}
+                {node.frontmatter.date} by {node.frontmatter.author} - {node.timeToRead}
                 {node.timeToRead == 1 ? " min read" : " mins read"}
               </small>
             </header>
