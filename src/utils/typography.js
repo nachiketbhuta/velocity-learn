@@ -1,7 +1,7 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "17px",
   baseLineHeight: 1.45,
   headerFontFamily: ["Poppins", "Arial", "sans-serif"],
   bodyFontFamily: ["Poppins", "serif"],
