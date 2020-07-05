@@ -1,12 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
-
-import logo from "../../content/assets/logo.png"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { rhythm } from "../utils/typography"
 
 const styles = {
   card: {
@@ -38,7 +33,7 @@ const Card = ({ node, title }) => {
         <small>
           {node.frontmatter.date} by {node.frontmatter.author} -{" "}
           {node.timeToRead}
-          {node.timeToRead == 1 ? " min read" : " mins read"}
+          {node.timeToRead === 1 ? " min read" : " mins read"}
         </small>
       </header>
       <section>

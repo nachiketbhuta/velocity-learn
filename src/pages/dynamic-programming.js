@@ -1,10 +1,5 @@
 import React, { useState } from "react"
-import { Link, graphql } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
-
-import logo from "../../content/assets/logo.png"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"

@@ -37,6 +37,7 @@ const Layout = ({ location, title, children }) => {
             marginTop: 0,
             marginBottom: isTabletOrMobile ? `15%` : `10%`,
           }}
+          alt="Velocity Learn"
         />
       </Link>
     )
@@ -51,6 +52,7 @@ const Layout = ({ location, title, children }) => {
             marginTop: 0,
             marginBottom: isTabletOrMobile ? `14%` : `8%`,
           }}
+          alt="Velocity Learn"
         />
       </Link>
     )
