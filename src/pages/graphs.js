@@ -16,7 +16,7 @@ const GraphIndex = ({ data, location }) => {
 
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="Graph Theory" />
+        <SEO title="Graph Theory Topics" />
         <h3>Graph Theory Algorithms</h3>
         {posts.map(({ node }) => 
           <Card node={node} title={node.frontmatter.title || node.fields.slug} />
