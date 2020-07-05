@@ -3,49 +3,49 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+import logo from '../../content/assets/logo.png'
+
+
+const styles = {
+  logo: {
+    maxWidth: `30%`,
+    marginTop: 0,
+    marginBottom: `5%`
+  },
+  header: {
+    display: `flex`,
+    margin: `auto`
+  },
+  link: {
+    display: `flex`,
+    justifyContent: `center`,
+    boxShadow: `none`,
+    color: `inherit`,
+  }
+}
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
   if (location.pathname === rootPath) {
     header = (
-      <h4
-        style={{
-          ...scale(0.7),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-          fontFamily: `Poppins`,
-        }}
+      <Link
+        style={styles.link}
+        to={`/`}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h4>
+        <img src={logo} style={styles.logo}/>
+      </Link>
     )
   } else {
     header = (
-      <h3
-        style={{
-          fontFamily: `Poppins`,
-          marginTop: 0,
-        }}
+      
+      <Link
+        style={styles.link}
+        to={`/`}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
+        <img src={logo} style={styles.logo}/>
+      </Link>
     )
   }
   return (
@@ -53,11 +53,11 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(36),
+        maxWidth: rhythm(34),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>{header}</header>
+      <header style={styles.header}>{header}</header>
       <main>{children}</main>
     </div>
   )
