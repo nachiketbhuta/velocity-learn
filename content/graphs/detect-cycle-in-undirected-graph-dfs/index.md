@@ -2,7 +2,7 @@
 title: Detect Cycle in Undirected Graph (DFS)
 date: 2020-07-05T10:19:45.413Z
 author: Nachiket Bhuta
-description: Given an undirected graph, check whether the graph contains any cycle
+description: Given an undirected graph, check whether the graph contains any cycle.
 ---
 A undirected graph is said to be cyclic if there exists atleast one cycle among the vertices in the graph.
 
