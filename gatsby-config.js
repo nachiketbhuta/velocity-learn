@@ -72,7 +72,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `content/assets/icon.png`,
       },
     },
@@ -81,6 +81,6 @@ module.exports = {
     `gatsby-plugin-postcss`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

@@ -48,7 +48,7 @@ const GraphIndex = ({ data, location }) => {
             aria-label="Search"
             placeholder="Type to filter posts..."
             onChange={handleInputChange}
-            class="rounded-lg py-2 px-4 border-2 mr-0 mobile:mt-3 text-gray-900 border-indigo-300 bg-gray-100"
+            className="rounded-lg py-2 px-4 border-2 mr-0 mobile:mt-3 text-gray-900 border-indigo-300 bg-gray-100"
           />
         </div>
         <hr />
