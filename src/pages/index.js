@@ -8,19 +8,27 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="Topics" />
+    <div>
+      <Layout location={location} title={siteTitle}>
+        <SEO title="Topics" />
 
-      <h3>List of Topics</h3>
-      <ul>
-        <li>
-          <Link to={`/graphs`}>Graph Theory</Link>
-        </li>
-        <li>
-          <Link to={`/dynamic-programming`}>Dynamic Programming</Link>
-        </li>
-      </ul>
-    </Layout>
+        <div className="mobile:p-6 tablet:p-6 mt-10">
+          <h3 className="font-sans text-xl mobile:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-2xl text-black-900 leading-tight">
+            List of Topics
+          </h3>
+          <div className="pl-8">
+            <ul className="mt-6">
+              <Link to={`/graphs`}>
+                <li className="text-xl">Graph Theory</li>
+              </Link>
+              <Link to={`/dynamic-programming`}>
+                <li className="text-xl">Dynamic Programming</li>
+              </Link>
+            </ul>
+          </div>
+        </div>
+      </Layout>
+    </div>
   )
 }
 

@@ -1,0 +1,25 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+html {
+  background-color: #f7fafc;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: underline;
+}
+
+hr {
+  margin-bottom: 10px;
+}
+
+ol,
+ul {
+  list-style-type: decimal;
+}

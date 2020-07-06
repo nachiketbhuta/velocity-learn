@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 
 import "katex/dist/katex.min.css"
 
@@ -18,33 +17,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <header>
-          <h3
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h3>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-              marginTop: `1%`,
-            }}
-          >
-            {post.frontmatter.date} by {post.frontmatter.author}
-          </p>
+      <div className="mt-8 px-4 pt-1">
+        <h3 className="mt-8">{post.frontmatter.title}</h3>
+        <header className="flex justify-between items-center">
+          <p className="text-gray-800">By {post.frontmatter.author}</p>
+          <p className="text-gray-800">{post.frontmatter.date}</p>
         </header>
+      </div>
+      <article className="text-justify p-4">
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
       </article>
     </Layout>
   )

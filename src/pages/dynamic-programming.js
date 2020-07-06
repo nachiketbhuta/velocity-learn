@@ -36,36 +36,35 @@ const DPIndex = ({ data, location }) => {
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts = hasSearchResults ? filteredData : allPosts
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="Dynamic Programming" />
-      <div
-        style={{
-          display: `flex`,
-          justifyContent: `space-between`,
-          flexDirection: isTabletOrMobile ? `column` : `row`,
-        }}
-      >
-        <h3>Dynamic Programming Topics</h3>
+    <div>
+      <Layout location={location} title={siteTitle}>
+        <SEO title="Dynamic Programming" />
+        <div className="mt-8 mb-4 p-4 flex items-center mobile:flex-col tablet:flex-col laptop:flex-row desktop:flex-row justify-between content-center">
+          <h3 className="text-2xl leading-tight mt-3">
+            Dynamic Programming Topics
+          </h3>
 
-        <input
-          type="text"
-          aria-label="Search"
-          placeholder="Type to filter posts..."
-          onChange={handleInputChange}
-          style={{
-            marginBottom: `20px`,
-          }}
-        />
-      </div>
-      {posts.length > 0
-        ? posts.map(({ node }) => (
-            <Card
-              node={node}
-              title={node.frontmatter.title || node.fields.slug}
-            />
-          ))
-        : `No topics available`}
-    </Layout>
+          <input
+            type="text"
+            aria-label="Search"
+            placeholder="Type to filter posts..."
+            onChange={handleInputChange}
+            class="rounded-lg py-2 px-4 border-2 mr-0 mobile:mt-3 text-gray-900 border-indigo-300 bg-gray-100"
+          />
+        </div>
+        <hr />
+        <div className="p-4">
+          {posts.length > 0
+            ? posts.map(({ node }) => (
+                <Card
+                  node={node}
+                  title={node.frontmatter.title || node.fields.slug}
+                />
+              ))
+            : `No topics available`}
+        </div>
+      </Layout>
+    </div>
   )
 }
 

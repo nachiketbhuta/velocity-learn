@@ -1,73 +1,33 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
-
 import logo from "../../content/assets/logo.png"
-
-import { useMediaQuery } from "react-responsive"
-
-const styles = {
-  header: {
-    display: `flex`,
-    margin: `auto`,
-  },
-  link: {
-    display: `flex`,
-    justifyContent: `center`,
-    boxShadow: `none`,
-    color: `inherit`,
-  },
-}
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
-
   if (location.pathname === rootPath) {
     header = (
-      <Link style={styles.link} to={`/`}>
-        <img
-          src={logo}
-          style={{
-            ...scale(0.4),
-            maxWidth: isTabletOrMobile ? "55%" : "35%",
-            marginTop: 0,
-            marginBottom: isTabletOrMobile ? `15%` : `10%`,
-          }}
-          alt="Velocity Learn"
-        />
+      <Link to={`/`}>
+        <div className="flex justify-center mobile:max-w-xs max-w-sm mx-auto mt-5 mobile:p-3">
+          <img src={logo} alt="Velocity Learn" />
+        </div>
       </Link>
     )
   } else {
     header = (
-      <Link style={styles.link} to={`/`}>
-        <img
-          src={logo}
-          style={{
-            ...scale(0.4),
-            maxWidth: isTabletOrMobile ? "55%" : "35%",
-            marginTop: 0,
-            marginBottom: isTabletOrMobile ? `14%` : `8%`,
-          }}
-          alt="Velocity Learn"
-        />
+      <Link to={`/`}>
+        <div className="flex justify-center mobile:max-w-xs max-w-sm mx-auto mt-5 mobile:p-3">
+          <img src={logo} alt="Velocity Learn" />
+        </div>
       </Link>
     )
   }
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(31),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header style={styles.header}>{header}</header>
-      <main>{children}</main>
+    <div className="mx-auto mobile:max-w-md tablet:max-w-xl laptop:max-w-2xl desktop:max-w-2xl">
+      <header>{header}</header>
+      <main className="markdown">{children}</main>
     </div>
   )
 }
