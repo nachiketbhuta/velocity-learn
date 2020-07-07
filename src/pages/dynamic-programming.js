@@ -40,7 +40,7 @@ const DPIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="Dynamic Programming" />
         <div className="mt-8 mb-4 p-4 flex items-center mobile:flex-col tablet:flex-col laptop:flex-row desktop:flex-row justify-between content-center">
-          <h3 className="text-2xl leading-tight mt-3">Dynamic Programming</h3>
+          <h3 className="text-2xl leading-tight mt-3">Topics on DP</h3>
 
           <input
             type="text"
