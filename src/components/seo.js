@@ -50,6 +50,14 @@ const SEO = ({ description, lang, meta, title }) => {
           property: `og:type`,
           content: `website`,
         },
+        {
+          name: `viewport`,
+          content: `width = device-width`,
+        },
+        {
+          name: `apple-mobile-web-app-capable`,
+          content: `yes`,
+        },
       ].concat(meta)}
     />
   )
