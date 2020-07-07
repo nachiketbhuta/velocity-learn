@@ -39,9 +39,7 @@ const GraphIndex = ({ data, location }) => {
         <SEO title="Graph Theory Topics" />
 
         <div className="mt-8 mb-4 p-4 flex items-center mobile:flex-col tablet:flex-col laptop:flex-row desktop:flex-row justify-between content-center">
-          <h3 className="text-2xl leading-tight mt-3">
-            Topics on Graph Theory
-          </h3>
+          <h3 className="text-2xl leading-tight mt-3">Topics</h3>
 
           <input
             type="text"
