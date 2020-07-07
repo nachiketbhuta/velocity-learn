@@ -58,12 +58,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/assets/`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
@@ -79,7 +73,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `standalone`,
-        icon: `src/assets/icon.png`,
+        icon: `content/assets/icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
