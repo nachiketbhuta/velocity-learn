@@ -25,7 +25,7 @@ const Layout = ({ location, title, children }) => {
     )
   }
   return (
-    <div className="mx-auto mobile:max-w-md tablet:max-w-xl laptop:max-w-2xl desktop:max-w-2xl">
+    <div className="container mx-auto mobile:max-w-md tablet:max-w-xl laptop:max-w-2xl desktop:max-w-2xl">
       <header>{header}</header>
       <main className="markdown">{children}</main>
     </div>
