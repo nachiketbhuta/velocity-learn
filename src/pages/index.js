@@ -21,6 +21,9 @@ const BlogIndex = ({ data, location }) => {
               <Link to={`/graphs`}>
                 <li className="text-xl">Graph Theory</li>
               </Link>
+              <Link to={`/trees`}>
+                <li className="text-xl">Trees</li>
+              </Link>
               <Link to={`/dynamic-programming`}>
                 <li className="text-xl">Dynamic Programming</li>
               </Link>

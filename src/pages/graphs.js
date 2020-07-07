@@ -40,7 +40,7 @@ const GraphIndex = ({ data, location }) => {
 
         <div className="mt-8 mb-4 p-4 flex items-center mobile:flex-col tablet:flex-col laptop:flex-row desktop:flex-row justify-between content-center">
           <h3 className="text-2xl leading-tight mt-3">
-            Graph Theory Algorithms
+            Topics on Graph Theory
           </h3>
 
           <input

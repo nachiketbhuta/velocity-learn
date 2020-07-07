@@ -4,13 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
 
-import { useMediaQuery } from "react-responsive"
-
-const DPIndex = ({ data, location }) => {
+const TreeIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const allPosts = data.allMarkdownRemark.edges
-
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
 
   const emptyQuery = ""
   const [state, setState] = useState({ filteredData: [], query: emptyQuery })
@@ -38,11 +34,9 @@ const DPIndex = ({ data, location }) => {
   return (
     <div>
       <Layout location={location} title={siteTitle}>
-        <SEO title="Dynamic Programming" />
+        <SEO title="Trees" />
         <div className="mt-8 mb-4 p-4 flex items-center mobile:flex-col tablet:flex-col laptop:flex-row desktop:flex-row justify-between content-center">
-          <h3 className="text-2xl leading-tight mt-3">
-            Topics on Dynamic Programming
-          </h3>
+          <h3 className="text-2xl leading-tight mt-3">Topics on Trees</h3>
 
           <input
             type="text"
@@ -68,17 +62,17 @@ const DPIndex = ({ data, location }) => {
   )
 }
 
-export default DPIndex
+export default TreeIndex
 
 export const pageQuery = graphql`
-  query DPIndex {
+  query TreeIndex {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/dynamic-programming/" } }
+      filter: { fileAbsolutePath: { regex: "/content/trees/" } }
       sort: { fields: [frontmatter___date], order: ASC }
     ) {
       edges {
