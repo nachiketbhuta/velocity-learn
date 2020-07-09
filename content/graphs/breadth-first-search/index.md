@@ -1,5 +1,5 @@
 ---
-title: Breadth FIrst Search
+title: Breadth First Search
 date: 2020-07-08T15:38:38.579Z
 author: Nachiket Bhuta
 description: Breadth first search is one of the basic and essential searching
